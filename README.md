@@ -3,6 +3,7 @@
 ### 2025.02.19.(수) ~ ing
 ### JAVA
 ```JAVA
+public static main {
 public static void main(String[] args) {
 byte a = 1;
 int b = 2;
@@ -12,6 +13,7 @@ double e = 3.14159265;
 max MAX_SCORE = 100;
 
 System.out.println("잘 부탁드립니다!")
+  }
 }
 ```
 ### JavaScript
