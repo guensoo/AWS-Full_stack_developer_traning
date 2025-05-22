@@ -1,20 +1,13 @@
 # AWS-Full_stack_developer_traning
 ## 국비수업
 ### 2025.02.19.(수) ~ ing
-### JAVA
-```JAVA
-public static main {
-public static void main(String[] args) {
-byte a = 1;
-int b = 2;
-long c = 300000000L;
-float d = 3.14F;
-double e = 3.14159265;
-max MAX_SCORE = 100;
-
-System.out.println("잘 부탁드립니다!")
-  }
-}
-```
-### JavaScript
-#### 미친듯이 공부해 봅시다
+### UI/UX 설계
+### HTML <image src="img/html.svg.png" width="5%" height="5%">
+### CSS <image src="img/css.svg.png" width="5%" height="5%">
+### JavaScript <image src="img/JavaScript.png" width="5%" height="5%">
+### ORACLE <image src="img/oracle.png" width="5%" height="5%">
+### JAVA <image src="img/java.png" width="5%" height="5%">
+### React <image src="img/logo512.png" width="5%" height="5%">
+### SpringBoot <image src="img/springBoot.png" width="5%" height="5%">
+### React Native <image src="img/RN.png" width="5%" height="5%">
+#### 미친듯이 공부하는중...
