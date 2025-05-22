@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exam5</title>
+  <style>
+    #m_div{
+      color: white;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      width: 50vw;
+    }
+    #btn_cal{
+      text-align: center;
+    }
+  </style>
+  <script>
+    let dan = () => {
+      let a = document.querySelector("#gugudan");
+      let res = a.value;
+      let b = '';
+
+      if(res == ""){
+        alert("값을 입력해주세요");
+        return;
+      }
+      if(res < 0 || res > 10){
+        alert("2 ~ 9 이하의 값을 입력해주세요");
+        return;
+      }
+      for(let i = 1; i < 10; i++){
+        b += (`${res} X ${i} = ${res*i}<br>`);
+        let m_div = document.querySelector("#m_div");
+        m_div.innerHTML = b;
+      }
+    }
+    // let h = document.querySelector("#hide");
+    // if(h.hasAttribute('value')){
+      
+    // }
+    
+    function sum(op) {
+      let x = document.querySelector('#x').value;
+      let y = document.querySelector('#y').value;
+      let sum = document.querySelector('#sum');
+      let sub = document.querySelector('#sub');
+      let mul = document.querySelector('#mul');
+      let div = document.querySelector('#div');
+
+      let c_div = document.querySelector('#c_div');
+      let result = '';
+
+      if(x.trim() === ''){
+        alert("수1 값을 입력해 주세요");
+        return;
+      }
+      if(y.trim() === ''){
+        alert("수2 값을 입력해 주세요");
+        return;
+      }
+      
+      x = parseInt(x);
+      y = parseInt(y);
+
+      if(op === '+'){
+        result = `${x + y}`;
+        c_div.innerHTML = result;
+        return;
+      }
+      else if(op === '-'){
+        result = `${x - y}`;
+        c_div.innerHTML = result;
+        return;
+      }
+      else if(op === '*'){
+        result = `${x * y}`;
+        c_div.innerHTML = result;
+        return;
+      }
+      else if(op === '/'){
+        result = `${x / y}`;
+        c_div.innerHTML = result;
+        return;
+      }
+      // switch(str){
+      //   case(sum):
+      //   break;
+
+      //   case(sub):
+      //   break;
+
+      //   case(mul):
+      //   break;
+
+      //   case(div):
+      //   break;
+      // }
+    }
+
+    
+  </script>
+</head>
+<body>
+  <!-- input에 단을 입력하고 계산시작을 누르면
+   아래에 구구단이 나오게 하기
+   만약 input에 값이 입력이 안되었다면 "값을 입력해주세요"
+   만약 input에 1이하 또는 10이상이 입력 되었다면 "2 ~ 9사이의 값을 입력해주세요"
+
+   "숨기기" 버튼 누르면 아래 출력된 구구단 숨기면서 버튼에 쓰여진 value를 "보이기"로 바꾸기 -->
+   단:
+  <input type="text" id="gugudan">
+  <input type="button" value="계산시작" id="start" onclick="dan()">
+  <input type="button" value="숨기기" id="hide">
+  <hr>
+  <div id="m_div"></div>
+  <hr>
+  <!--  계산기 만들기 -->
+    <table border="1">
+      <tr>
+        <td>수1</td>
+        <td><input type="text" id='x'></td>
+      </tr>
+      <tr>
+        <td>수2</td>
+        <td><input type="text" id='y'></td>
+      </tr>
+      <tr id="btn_cal">
+        <td colspan="4">
+        <input type="button" id="sum" value="+" onclick="sum('+')">
+        <input type="button" id="min" value="-" onclick="sum('-')">
+        <input type="button" id="mul" value="*" onclick="sum('*')">
+        <input type="button" id="div" value="/" onclick="sum('/')">
+        </td>
+      </tr>
+      <tr>
+        <td>결과</td>
+        <td>
+        <div id="c_div">
+
+        </div>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

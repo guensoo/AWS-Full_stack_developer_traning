@@ -1,0 +1,8 @@
+java : 1
+are : 1
+fuck : 1
+is : 1
+hard : 1
+suck : 1
+you : 1
+really : 1

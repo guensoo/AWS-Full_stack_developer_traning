@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: rgb(237, 250, 255);
+        }
+        #container{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            margin-top: 250px;
+            flex-direction: column;
+            align-items: center;
+        }
+        #heiding{
+            margin-bottom: 4px;
+        }
+        #table{
+            border-top: 3px solid gray;
+            border-bottom: 3px solid gray;
+            width: 60%;
+        }
+        #menu{
+            background-color: gray;
+            border: none;
+        }
+        #button{
+            margin-top: 20px;
+            width: 800px;
+            text-align: center;
+        }
+        #logout{
+            background-color: darkblue;
+            color: white;
+            width: 100px;
+            height: 40px;
+            border-radius: 4px;
+        }
+        #edit{
+            background-color: darkblue;
+            color: white;
+            width: 100px;
+            height: 40px;
+            border-radius: 2px;
+        }
+        tr:hover{
+            background-color: lightyellow;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #logout:hover{
+            background: blue;
+            cursor: pointer;
+        }
+        #edit:hover{
+            background: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2 id="heading">자유게시판</h3>
+        <table id="table">
+            <tr id="menu">
+                <td>순번</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+            <tr id="table1">
+                <td>5</td>
+                <td>이용후기</td>
+                <td>존윅</td>
+                <td>2021-04-22</td>
+                <td>20</td>
+            </tr>
+            <tr id="table2">
+                <td>4</td>
+                <td>게시판이용문의</td>
+                <td>제임스</td>
+                <td>2021-04-22</td>
+                <td>15</td>
+            </tr>
+            <tr id="table3">
+                <td>3</td>
+                <td>가입인사</td>
+                <td>새내기</td>
+                <td>2021-04-21</td>
+                <td>7</td>
+            </tr>
+            <tr id="table4">
+                <td>2</td>
+                <td>[필독]게시판이용안내</td>
+                <td>매니저</td>
+                <td>2021-04-21</td>
+                <td>94</td>
+            </tr>
+            <tr id="table5">
+                <td>1</td>
+                <td>[긴급]공지사항</td>
+                <td>관리자</td>
+                <td>2021-04-20</td>
+                <td>85</td>
+            </tr>
+        </table>
+        <div id="button">
+            <button id="logout"><a href="login.html">로그아웃</a></button>
+            <button id="edit"><a href="personal_info.html">개인정보수정</a></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 농구공이 23개가 있다.
+    // 하나의 박스에 4개씩 들어갈 수 있다.
+    // 총 필요한 박스의 갯수를 구하시오
+    // Math.ceil() : 올림 함수
+    // 박스의 갯수 : 
+
+    let basketBall = 30;
+    let canBox = 4;
+    let box = basketBall / canBox;
+    let result1 = box % 2 == 0 ? box : Math.ceil(box);
+    // let box1 = basketBall / box > box ? Math.ceil(box + 1) : Math.ceil(box);
+    // document.write("필요한 박스 갯수 : " + box1, "<br>");
+
+    document.write("필요한 박스 갯수 : " + result1, "개", "<br>");
+
+    document.write("<hr>");
+
+    // 사각형의 면적과 둘레 계산하기
+    // 가로 : 10
+    // 세로 : 5
+    // 면적 : 
+    // 둘레 : 
+    let width = 10;
+    let height = 5;
+    document.write(
+      "면적 : " + (width * height) + "<br>" +
+      "둘레 : " + (2 * (width + height) + "<br>")
+    );
+    document.write("<hr>");
+
+    // 숫자들의 평균 구하기
+    // 숫자1 : 80
+    // 숫자2 : 95
+    // 숫자3 : 75
+    // 총합 : 
+    // 평균 : 
+    let n1 = 80;
+    let n2 = 95;
+    let n3 = 75;
+    let sum = n1 + n2 + n3;
+    let avg = sum / 3;
+    document.write(
+      "총합 : " + sum + "<br>" +
+      "평균 : " + avg + "<br>"
+    );
+    document.write("<hr>");
+
+    // 하루의 총 시간을 초로 계산하기
+    let time = 24;
+    let min = 60;
+    let sec = 60;
+    let totalSec;
+    totalSec = time;
+    totalSec *= min;
+    totalSec *= sec;
+    document.write("하루의 총 시간을 초로 계산하면 "+totalSec+"초 입니다.");
+    document.write("<hr>");
+
+    // 섭씨 온도를 화씨 온도로 변환하기
+    // 화씨 = 섭씨 * 1.8 + 32;
+    // 25도를 화씨로 변환하여 출력하세요
+    let Cel = 25;
+    let Fah = Cel * 1.8 + 32;
+    document.write("25도의 화씨는 : ", Fah,"<sup>"+"o"+"</sup>" + "F 입니다.", "<hr>");
+
+    // let a, b;
+    // a = b = 3 + 4 * 5;
+    // a : (23)
+    // b : (23)
+    // 1. 산술연산자(*) -> 산술연산자(+)
+    // 대입연산
+
+    let a, b;
+    a = b = 3 + 4 * 5;
+    document.write("a : ", a, "<br>", "b : ", b, "<hr>");
+
+    // let x;
+    // x = 10 / 2 * 3;
+    // x : (15)
+    // 왼쪽부터 오른쪽으로 진행 후 x에 대입
+
+    let x = 10 / 2 * 3;
+    document.write("x : ", x, "<hr>");
+
+    // let result
+    // result = 5 + 3 > 7 && 2 < 4;
+    // result : (true)
+    // 1. 산술연산자 계산
+    // 2. 비교연산자 계산
+    // 3. 논리연산자 계산
+
+    let result;
+    result = 5 + 3 > 7 && 2 < 4;
+    document.write(result, "<hr>")
+
+    // let a, b, c, total
+    // total = (a = 2) + (b = 3) * (c = 4);
+    // 1. total : (14)
+    // 2. a : (2), b : (3), c : (4)
+    // 1. 소괄호 연산
+    // 2. 산술연산자(*) -> 산술연산자(+)
+    // 3. 대입연산 
+
+
+    let a1, b1, c1, total;
+    total = (a1 = 2) + (b1 = 3) * (c1 = 4);
+    document.write("total : ", total, "<br>", "a : ", a1, "<br>", "b : ", b1, "<br>", "c : ", c1, "<hr>")
+
+    // let a, x;
+    // x = (a = 5) > 3 ? a * 2 : a / 2;
+    // a : (5)
+    // x : (10)
+    // 1. 소괄호 연산
+    // 2. 비교연산
+    // 3. 삼항연산
+    // 4. 대입연산
+
+    let a2, x2;
+    x2 = (a2 = 5) > 3 ? a2 * 2 : a2 / 2;
+    document.write("a : ", a2, "<br>", "x : ", x2, "<hr>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

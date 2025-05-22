@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: rgb(237, 250, 255);
+        }
+        #container{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            margin-top: 250px;
+            flex-direction: column;
+            align-items: center;
+        }
+        #menu{
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            border: 1px solid gray;
+        }
+        #table{
+            background-color: white;
+            border: 1px solid gray;
+        }
+        #finish{
+            margin-top: 20px;
+            background-color: darkblue;
+            color: white;
+            width: 100px;
+            height: 40px;
+            border-radius: 2px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #finish:hover{
+            background: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h2>개인정보입력 폼</h2>
+        </div>
+        <table id="table">
+            <tr id="menu">
+            <td colspan="2">개인정보</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid gray;">주민등록번호</td>
+                <td style="border: 1px solid gray;">
+                    <input type="tel">
+                    -
+                    <input type="password">
+                    <button>검증</button>
+                </td>
+            </tr>
+            <tr id="birthday">
+                <td style="border: 1px solid gray;">생일</td>
+                <td style="border: 1px solid gray;">
+                    <input type="tel">
+                    년
+                    <input type="tel">
+                    월
+                    <input type="tel">
+                    일
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid gray;">성별</td>
+                <td style="border: 1px solid gray;">
+                    <input type="radio" name="gender">남자
+                    <input type="radio" name="gender">여자
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid gray;">관심분야</td>
+                <td style="border: 1px solid gray;">
+                    <input type="checkbox">여행
+                    <input type="checkbox">영화
+                    <input type="checkbox">독서
+                    <input type="checkbox">음악
+                    <input type="checkbox">관심없음
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid gray;">자기소개</td>
+                <td style="border: 1px solid gray;">
+                    <input type="text">
+                </td>
+            </tr>
+        </table>
+        <div id="button">
+            <button id="finish"><a href="board.html">수정완료</a></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main">
+        <!-- 헤더 영역 -->
+        <header>
+            <h1>자기소개</h1>
+        </header>
+
+        <!-- 자기소개 내용 -->
+        <section id="intro" class="rounded-box">
+            <p>안녕하세요! 저는 초보 개발자입니다.</p>
+        </section>
+
+        <!-- 버튼 영역 -->
+        <section id="info-buttons" class="rounded-box">
+            <button onclick="showSection('personal-info')">개인정보</button>
+            <button onclick="showSection('tech-stack')">기술스택</button>
+            <button onclick="showSection('portfolio')">포트폴리오</button>
+        </section>
+
+        <!-- 정보 내용 영역 -->
+        <section id="info-content">
+            <div id="personal-info" class="info-section">
+                <h2>개인정보</h2>
+                <p>이름: 최근수<br> 나이: 29<br> 이메일: chbk9195@naver.com</p>
+            </div>
+            <div id="tech-stack" class="info-section">
+                <h2>기술스택</h2>
+                <p>HTML, CSS, JavaScript, React, Node.js, Python</p>
+            </div>
+            <div id="portfolio" class="info-section">
+                <h2>포트폴리오</h2>
+                <p>개발한 프로젝트들에 대한 설명이 여기에 들어갑니다.</p>
+            </div>
+        </section>
+
+        <!-- 취미 리스트 -->
+        <section id="hobbies" class="rounded-box">
+            <h2>취미</h2>
+            <div id="hobby-carousel">
+                <img src="https://via.placeholder.com/300x200/FFB6C1/000000?text=게임" alt="게임" class="hobby-image" onclick="openPopup('게임', '게임은 즐거운 여가 활동입니다. 친구들과 함께 즐기기도 하고, 혼자서도 재미있게 할 수 있는 활동입니다.')">
+                <img src="https://via.placeholder.com/300x200/FF6347/FFFFFF?text=음악감상" alt="음악감상" class="hobby-image" onclick="openPopup('음악감상', '음악감상은 다양한 장르의 음악을 듣는 취미입니다. 음악은 사람의 마음을 치유하고, 감정을 풍부하게 만들어줍니다.')">
+                <img src="https://via.placeholder.com/300x200/FFD700/000000?text=영상시청" alt="영상시청" class="hobby-image" onclick="openPopup('영상시청', '영상 시청은 영화, 드라마, 유튜브 등 다양한 콘텐츠를 즐기는 취미입니다. 시청은 휴식과 재미를 제공합니다.')">
+            </div>
+        </section>
+
+        <!-- 채팅박스 -->
+        <section id="chat-box" class="rounded-box">
+            <div id="chatMessages"></div>
+            <div id="chatInputArea">
+                <input type="text" id="chatInput" placeholder="메시지를 입력하세요..." />
+                <button onclick="sendMessage()">전송</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- 팝업 창 -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closeBtn" class="close-btn">&times;</span>
+            <h3 id="popup-title">팝업 제목</h3>
+            <p id="popup-description">팝업 설명</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

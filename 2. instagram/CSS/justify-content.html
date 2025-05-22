@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section{display: flex;}
+    div{
+      width: 50px; height: 50px;
+      margin: 10px;
+      color: white;
+      text-align: center;
+    }
+    .a{background: yellowgreen}
+    .b{background: violet;}
+    .c{background: cornflowerblue;}
+    .d{background: orangered;}
+    .e{background: #a39290;}
+    /* 왼쪽 끝에 배치 (1 2 3 4 5    ) */
+    .flex-start{
+      justify-content: flex-start;
+    }
+    /* 오른쪽 끝에 배치 (    1 2 3 4 5)
+    !! flex-direction과 다름 */
+    .flex-end{
+      justify-content: flex-end;
+    }
+    /* 중앙에 모여서 배치 (    1 2 3 4 5    ) */
+    .flex-center{
+      justify-content: center;
+    }
+    /* 양 끝 요소는 가장자리에 배치하고 간격을 균일하게 준다.
+        (1   2  3  4   5) */
+    .space-between{
+      justify-content: space-between;
+    }
+    /* 모든 간격을 균일하게 준다.( 1 2 3 4 5) */
+    .space-around{
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+  <h1>justify-content와 align-items</h1>
+  <hr>
+  <p>flex-start</p>
+  <section class="flex-start">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="d">d</div>
+    <div class="e">e</div>
+  </section>
+  <p>flex-end</p>
+  <section class="flex-end">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="d">d</div>
+    <div class="e">e</div>
+  </section>
+  <p>flex-center</p>
+  <section class="flex-center">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="d">d</div>
+    <div class="e">e</div>
+  </section>
+  <p>space-between</p>
+  <section class="space-between">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="d">d</div>
+    <div class="e">e</div>
+  </section>
+  <p>space-around</p>
+  <section class="space-around">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="d">d</div>
+    <div class="e">e</div>
+  </section>
+</body>
+</html>

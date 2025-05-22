@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>내 첫 웹 페이지</title>
+    <style>
+        body{
+            background-color: rgba(22, 22, 22, 0.884);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        h1 {
+            border: 1px solid;
+            background-color: gray;
+            border-radius: 8px;
+            color: blue;
+        }
+        h2 {
+            color: green;
+        }
+        p {
+            font-size: 16px;
+            color: gray;
+        }
+        li{
+            list-style: none;
+            text-align: left;
+        }
+        img{
+            width: 60vw;
+            height: 50vh;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:active {
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="bodydiv">
+        <div class="header">
+            <h1>안녕하세요!</h1>
+            <p>이것은 간단한 HTML 예제입니다.</p>
+         </div>
+
+        <!-- 목차 -->
+        <div class="list">
+            <h2>목차</h2>
+            <ul>
+                <li><a href="#section1">제목과 문단</a></li>
+                <li><a href="#section2">이미지</a></li>
+                <li><a href="#section3">하이퍼링크</a></li>
+            </ul>
+        </div>
+
+        <!-- 제목과 문단 -->
+        <h2 id="section1">제목과 문단</h2>
+        <p>HTML은 제목, 문단, 이미지 등으로 구성됩니다. 아래는 이미지와 링크 예제입니다.</p>
+
+        <!-- 이미지 -->
+        <h2 id="section2">이미지</h2>
+        <img src="sample.jpg" alt="샘플 이미지">
+        <p>위의 이미지는 샘플 이미지입니다. 원하는 이미지를 여기에 넣을 수 있습니다.</p>
+
+        <!-- 하이퍼링크 -->
+        <h2 id="section3">하이퍼링크</h2>
+        <a href="#" target="_blank">구글로 이동</a>
+    </div>
+</body>
+</html>

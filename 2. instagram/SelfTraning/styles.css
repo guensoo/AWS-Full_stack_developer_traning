@@ -1,0 +1,273 @@
+/* 전체 body 스타일 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 화면 크기 전체를 활용 */
+  overflow: hidden; /* 화면 밖으로 나가지 않게 설정 */
+}
+
+/* 팝업 스타일 */
+.popup {
+  display: none; /* 기본적으로 숨겨둠 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 팝업이 다른 내용 위에 표시되도록 설정 */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: red;
+}
+
+/* 나머지 스타일... */
+
+
+/* 전체 레이아웃 설정 */
+#main {
+    background-color: white;
+    width: 70%; /* 너비를 70%로 줄여서 전체 크기를 줄임 */
+    max-width: 700px; /* 최대 너비를 700px로 설정 */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: height 0.3s ease; /* 높이가 바뀔 때 애니메이션 효과 */
+}
+
+/* 헤더 스타일 */
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #4CAF50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 자기소개 박스 스타일 */
+#intro {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  background-color: #FFFBF2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* 버튼 영역 스타일 */
+#info-buttons {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#info-buttons button {
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#info-buttons button:hover {
+  background-color: #45a049;
+}
+
+/* 정보 내용 스타일 */
+#info-content {
+  margin-top: 0px;
+}
+
+.info-section {
+  font-size: 14px;
+  color: #555;
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 취미 리스트 스타일 */
+#hobbies {
+  margin-top: 0px;
+  text-align: center;
+}
+
+#hobby-carousel {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.hobby-image {
+  width: 220px;
+  height: 140px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hobby-image:hover {
+  transform: scale(1.1);
+}
+
+/* 채팅박스 스타일 */
+#chat-box {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #FFFBF2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* 채팅 박스의 너비를 줄임 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chatMessages {
+  width: 100%;
+  height: 120px; /* 채팅창 높이 줄임 (4줄 정도 보이게) */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 사용자 메시지 스타일 */
+#chatMessages .user-message {
+  align-self: flex-end; /* 사용자 메시지는 오른쪽에 위치 */
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* AI 메시지 스타일 */
+#chatMessages .ai-message {
+  align-self: flex-start; /* AI 메시지는 왼쪽에 위치 */
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* 입력창 스타일 */
+#chatInputArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#chatInput {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#chatInputArea button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#chatInputArea button:hover {
+  background-color: #45a049;
+}
+
+
+/* 팝업 스타일 */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.close-btn {
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close-btn:hover {
+  color: black;
+}

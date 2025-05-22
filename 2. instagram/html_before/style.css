@@ -1,0 +1,23 @@
+/* 제목 스타일 */
+h1 {
+  color: #333399;
+  text-align: center;
+}
+
+/* 문단 스타일 */
+p {
+  color: #555;
+  text-align: center;
+}
+
+/* 버튼 스타일 */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: white;
+  background-color: #333399;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 바디 */
+    body{
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* 회원가입(중앙배경) 전체 */
+    .signup-container{
+      padding: 40px;
+      width: 300px;
+      border-radius: 8px;
+      background: #fff;
+    }
+    /* 회원가입 글 */
+    .signup-container h2{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* 회원가입(입력창) 전체 */
+    .signup-container form{
+      display: flex;
+      flex-direction: column;
+    }
+    /* 라벨 전체 */
+    .signup-container label{
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    /* 입력창 전체 */
+    .signup-container input{
+      display: flex;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    /* 아이디 입력창 */
+    #username{
+      width: 22vh;
+    }
+    .id-check{
+      display: flex;
+      justify-content: space-between;
+    }
+    /* 이메일 입력창 */
+    #email{
+      width: 16vh;
+    }
+    /* 이메일 작성 */
+    .signup-container .email-check{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+    /* 회원가입 버튼 */
+    .signup-container button{
+      border: none;
+      background: blue;
+      color: #fff;
+      height: 38px;
+      border-radius: 6px;
+      
+    }
+    /* 버튼 호버 */
+    .signup-container button:hover{
+      cursor: pointer;
+      background: darkblue;
+      font-weight: bold;
+    }
+    /* email 도메인 */
+    .signup-container select{
+      height: 38px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    /* 로그인 박스 */
+    .signup-container .login{
+      text-align: center;
+      margin-top: 4px;
+    
+    }
+    /* 로그인 버튼부분 */
+    .login a{
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>회원가입</h2>
+    <form action="#" method="POST">
+      <label for="name">이름</label>
+      <input type="text" id="name" placeholder="이름 입력">
+
+      <label for="id">아이디</label>
+        <div class="id-check">
+          <input type="text" id="username" placeholder="아이디 입력">
+          <button id="check">중복체크</button>
+        </div>
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" placeholder="비밀번호 입력">
+
+      <label for="password">비밀번호 확인</label>
+      <input type="password" id="password-check" placeholder="비밀번호 확인">
+
+      <label for="email">이메일</label>
+      <div class="email-check">
+        <input type="email" id="email" placeholder="이메일">
+        <span>@</span>
+          <select id="email-domain">
+          <option selected>naver.com</option>
+          <option>gamil.com</option>
+          <option>hanmail.com</option>
+          <option>daum.net</option>
+          </select>
+      </div>
+
+      <button id="signup">회원가입</button>
+      <div class="login">
+      이미 계정이 있으신가요?<a href="login.html">로그인</a>
+    </div>
+    </form>
+  </div>
+</body>
+</html>
