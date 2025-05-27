@@ -24,3 +24,5 @@ const Button = ({title, onPress}) => {
     </Container>
   )
 }
+
+export default Button;
