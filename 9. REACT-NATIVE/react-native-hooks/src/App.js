@@ -9,6 +9,8 @@ import Length from './components/Length';
 import AverageCalculator from './components/Average';
 import Dog from './components/Dog';
 import LengthRepeat from './components/LengthRepeat';
+import Signup from './components/Signup';
+import { ChangeTheme } from './components/ChangeTheme';
 
 const Container = styled.View`
   flex: 1;
@@ -41,7 +43,9 @@ const App = () => {
       {/* <Length /> */}
       {/* <AverageCalculator /> */}
       {/* <Dog /> */}
-      <LengthRepeat />
+      {/* <LengthRepeat /> */}
+      {/* <Signup /> */}
+      <ChangeTheme />
   </Container>
   )
 }

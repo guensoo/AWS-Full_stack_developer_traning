@@ -12,6 +12,15 @@ const AverageCalculator = () => {
     return sum/numbers.length;
   },[numbers]); // numbers에 변화가 생길 때 마다 재실행이 된다.
 
+  // 숫자가 변하던 안변하던 계속 계산된다.
+  // acc : 누적값(최초 0)
+  // curr : 인덱스(최초 0)
+  // const average = (() => {
+  //   console.log('평균 계산 실행됨');
+  //   const sum = numbers.reduce((acc,curr) => acc + curr, 0);
+  //   return sum/numbers.length;
+  // })();
+
   return (
     <View style={{padding:20}}>
       <Text style={{fontSize: 18}}>Average : {average}</Text>
