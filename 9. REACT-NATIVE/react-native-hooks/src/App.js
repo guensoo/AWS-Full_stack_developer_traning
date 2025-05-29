@@ -11,6 +11,8 @@ import Dog from './components/Dog';
 import LengthRepeat from './components/LengthRepeat';
 import Signup from './components/Signup';
 import { ChangeTheme } from './components/ChangeTheme';
+import Counter2 from './components/Counter2';
+import LoginForm from './components/LoginForm';
 
 const Container = styled.View`
   flex: 1;
@@ -45,7 +47,9 @@ const App = () => {
       {/* <Dog /> */}
       {/* <LengthRepeat /> */}
       {/* <Signup /> */}
-      <ChangeTheme />
+      {/* <ChangeTheme /> */}
+      {/* <Counter2 /> */}
+      <LoginForm />
   </Container>
   )
 }

@@ -8,11 +8,11 @@ const HomeProvider = ({children}) => {
   // const [logined, setLogined] = useState({name : 'John Doe'});
 
   const [user, setUser] = useState(null);
-  const login = () => setUser("John Doe");
+  const login = () => setUser({name : 'John Doe'});
   const logOut = () => setUser(null);
 
   return(
-    <HomeContext.Provider value={{logined, login, logOut}}>
+    <HomeContext.Provider value={{user, login, logOut}}>
       {children}
     </HomeContext.Provider>
   )
