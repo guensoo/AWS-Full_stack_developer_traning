@@ -1,3 +1,5 @@
+import { ImageBackground } from "react-native"
+
 // 프로젝트에서 사요할 색깔을 관리
 const colors = {
   white : '#fff',
@@ -11,4 +13,5 @@ const colors = {
 export const theme = {
   background : colors.white,
   text : colors.black,
+  imageBackground : colors.gray_0,
 }
