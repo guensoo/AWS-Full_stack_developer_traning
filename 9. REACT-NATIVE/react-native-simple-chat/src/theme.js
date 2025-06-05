@@ -11,15 +11,30 @@ const colors = {
 }
 
 export const theme = {
+  // 배경색
   background : colors.white,
+  // 글자색
   text : colors.black,
+  // 이미지 관련
   imageBackground : colors.gray_0,
+  imageButtonBackground : colors.gray_0,
+  imageButtonIcon : colors.white,
+
+  // Input관련
   label : colors.gray_1,
   inputPlaceholder : colors.gray_1,
   inputBorder : colors.gray_1,
   errorText : colors.red,
+
+  // 버튼 관련
   buttonBackground : colors.blue,
   buttonTitle : colors.white,
   buttonUnFilledTitle : colors.blue,
   headerTintCOlor : colors.black,
+
+  // Spinner
+  spinnerBackground : colors.black,
+  spinnerIndicator : colors.white,
+  
+
 }

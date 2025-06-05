@@ -5,6 +5,9 @@ import { validateEmail, removeWhitespace } from "../utils/common";
 import { useRef, useState, useEffect } from "react";
 import { Image, Input, Button } from "../components/index.js";
 import { images } from "../utils/images";
+import { signup } from "../utils/firebase.js";
+import { Alert } from "react-native";
+import * as ImagePicker from 'expo-image-picker';
 
 const Container = styled.View`
   flex : 1;
@@ -37,9 +40,7 @@ const Signup = () => {
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
   
-  const _handleSignupButtonPress = () => {
-
-  }
+  
   useEffect(() => {
     let _errorMessage = '';
     if(!name){
@@ -57,6 +58,15 @@ const Signup = () => {
     setErrorMessage(_errorMessage);
   },[name, email, password, passwordConfirm, errorMessage]);
 
+  const _handleSignupButtonPress = async() => {
+    try {
+      const user = await signup({email, password});
+      console.log(user);
+      Alert.alert('Signup Success',user.email);
+    } catch (error) {
+      Alert.alert('Signup Error', error.message);
+    }
+  }
   // 조건에 따라 버튼 활성화 / 비활성화 하기
   useEffect(() => {
     setIsDisabled(
@@ -101,7 +111,12 @@ const Signup = () => {
     >
       <Container>
         {/* <Text style={{fontSize : 30}}>Signup Screen</Text> */}
-        <Image rounded url={photoURL} />
+        <Image 
+            rounded 
+            url={photoURL}
+            showButton
+            onChangeImage={url => {console.warn(url), setPhotoURL(url)}}
+        />
         <Input
           label="Name"
           value={name}
