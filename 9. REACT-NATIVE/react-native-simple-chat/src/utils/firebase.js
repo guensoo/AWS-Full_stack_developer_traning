@@ -48,12 +48,12 @@ export const signup = async({email,password, name, photoURL}) => {
   const photoUrl = await uploadImage(photoURL);
 
   // 현재 로그인한 유저의 이름과 프로필 사진을 업데이트 합니다.
-  await updateProfile(auth.currentUser,{displayName : name, photoURL : photoURL})
+  await updateProfile(auth.currentUser,{displayName : name, photoURL : photoUrl})
   return user;
 }
 
 // 이미지를 업로드 하는 함수
-const uploadImage = async uri => {
+const uploadImage = async (uri) => {
   // 이미 https로 시작하는 경우 바로 반환을 해라
   if(uri.startsWith('https')){
     return uri;
@@ -77,4 +77,8 @@ const uploadImage = async uri => {
   })
 
   return await getDownloadURL(storageRef);
+}
+
+export const logout = async () => {
+  return await auth.signOut();
 }

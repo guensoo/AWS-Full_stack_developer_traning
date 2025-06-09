@@ -2,12 +2,14 @@ import styled from "styled-components";
 // import { Text } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { validateEmail, removeWhitespace } from "../utils/common";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import { Image, Input, Button } from "../components/index.js";
 import { images } from "../utils/images";
 import { signup } from "../utils/firebase.js";
 import { Alert } from "react-native";
 import * as ImagePicker from 'expo-image-picker';
+import { ProgressContext } from '../contexts';
+import { UserContext } from "../contexts/User.js";
 
 const Container = styled.View`
   flex : 1;
@@ -40,6 +42,8 @@ const Signup = () => {
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
   
+  const {spinner} = useContext(ProgressContext);
+  const {dispatch} = useContext(UserContext);
   
   useEffect(() => {
     let _errorMessage = '';
@@ -60,11 +64,19 @@ const Signup = () => {
 
   const _handleSignupButtonPress = async() => {
     try {
-      const user = await signup({email, password});
+      spinner.start();
+      //UserContext의 dispatch함수를 통해 user의 상태가 인증된 사용자 정보로 변경된다.
+      dispatch(user);
+      const user = await signup({email, password, name, photoURL});
       console.log(user);
       Alert.alert('Signup Success',user.email);
     } catch (error) {
       Alert.alert('Signup Error', error.message);
+    } finally{
+      spinner.stop();
+      
+    console.log('[DEBUG] images.photo:', images.photo);
+    console.log('[DEBUG] photoURL:', photoURL);
     }
   }
   // 조건에 따라 버튼 활성화 / 비활성화 하기

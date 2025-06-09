@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-nateive-test",
-    "slug": "react-nateive-test",
+    "name": "react-native-test",
+    "slug": "react-native-test",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
