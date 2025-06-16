@@ -23,6 +23,8 @@ const hostname = window && window.location&& window.location.hostname;
 // http://localhost:5000/todo
 if(hostname == "localhost"){
   backendHost = "http://localhost:5000";
+} else{
+  backendHost = "http://api.springbootcgs.shop/";
 }
 
 export const API_BASE_URL = `${backendHost}`
