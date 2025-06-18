@@ -24,7 +24,7 @@ const hostname = window && window.location&& window.location.hostname;
 if(hostname == "localhost"){
   backendHost = "http://localhost:5000";
 } else{
-  backendHost = "http://api.springbootcgs.shop/";
+  backendHost = "https://api.springbootcgs.shop/";
 }
 
 export const API_BASE_URL = `${backendHost}`
